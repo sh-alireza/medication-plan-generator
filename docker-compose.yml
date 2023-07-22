@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+    knoumeds:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: knoumeds:v1.0.0
+        hostname: knoumeds
+        container_name: knoumeds
+        restart: always
+        networks:
+          - services_net
+        ports:
+          - 8081:8000
+
+networks:
+  services_net:
+    external: true
+
