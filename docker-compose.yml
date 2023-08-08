@@ -1,13 +1,13 @@
 version: '3.3'
 
 services:
-    knoumeds:
+    medplan:
         build:
             context: .
             dockerfile: Dockerfile
-        image: knoumeds:v1.0.0
-        hostname: knoumeds
-        container_name: knoumeds
+        image: medplan:v1.0.0
+        hostname: medplan
+        container_name: medplan
         restart: always
         networks:
           - services_net
@@ -16,5 +16,4 @@ services:
 
 networks:
   services_net:
-    external: true
 
